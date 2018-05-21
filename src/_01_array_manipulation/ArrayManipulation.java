@@ -58,7 +58,7 @@ public class ArrayManipulation {
 		}
 		int[] inputArrayCopy = Arrays.copyOf(testArray, 100);
 
-		int[] actualOutputArray = Inserting.insertAt(testArray, 73, 42);
+		int[] actualOutputArray = Inserting.insertAt(testArray, 42, 73);
 		assertEquals(42, actualOutputArray[73]);
 		for (int i = 0; i < 73; ++i) {
 			assertEquals(inputArrayCopy[i], actualOutputArray[i]);

@@ -15,11 +15,11 @@ public class Inserting {
 	}
 
 	public static String[] insertAlphabetically(String[] orderedArray, String string) {
-		String[] alpha = new String[orderedArray.length];
+		String[] alpha = new String[orderedArray.length + 1];
 		for (int i = 0; i < orderedArray.length; i++) {
-			alpha[i].equals(orderedArray[i]);
+			alpha[i] = orderedArray[i];
 		}
-		alpha[orderedArray.length].equals(string);
+		alpha[orderedArray.length] = string;
 		Sorting.sort(alpha);
 		return alpha;
 	}
