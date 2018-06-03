@@ -24,30 +24,40 @@ public class ArrayList<T> {
 	}
 
 	void set(int i, String string) {
-		list[i] = (T)string;
+		list[i] = (T) string;
 	}
 
 	public void addAt(int i, T c) {
-		System.out.println(list.length);
 		T[] addat = (T[]) new Object[list.length + 1];
 		for (int j = 0; j < i; j++) {
 			addat[j] = list[j];
 		}
 		addat[i] = c;
-		for (int j = i+1; j < list.length+1; j++) {
-			addat[j] = list[j-1];
+		for (int j = i + 1; j < list.length + 1; j++) {
+			addat[j] = list[j - 1];
 		}
 		list = addat;
 	}
 
 	public void remove(int i) {
-		T[]remov = (T[]) new Object[list.length-1];
+		T[] remov = (T[]) new Object[list.length - 1];
+		System.out.println(list[1]);
 		for (int j = 0; j < i; j++) {
 			remov[j] = list[j];
+
 		}
-		for (int j = i; j < list.length; j++) {
-			remov[j] = list[j+1];
+		for (int j = i; j < list.length - 1; j++) {
+			remov[j] = list[j + 1];
 		}
 		list = remov;
+	}
+
+	public Boolean contains(String string) {
+		for (int i = 0; i < list.length; i++) {
+			if (list[i].equals(string)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }

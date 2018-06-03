@@ -1,5 +1,7 @@
 package _02_diy_array_list;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
@@ -46,7 +48,7 @@ public class CustomArrayListTest {
 		ArrayList<Character> list = new ArrayList<Character>();
 		list.add('D');
 		list.add('I');
-		
+
 		list.add('G');
 		list.add('O');
 
